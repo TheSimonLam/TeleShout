@@ -1,0 +1,13 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.fromInput,
+.titleInput {
+  height: 50px;
+}
+
+.textArea {
+  height: 300px;
+}
