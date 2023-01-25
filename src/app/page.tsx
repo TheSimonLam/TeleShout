@@ -15,11 +15,13 @@ export default async function HomePage() {
   const letters = await getLetters();
 
   return (
-    <div>
+    <div className={styles.homepageContainer}>
       {letters?.map((letter) => (
-        <Link key={letter.id} href={`/letters/${letter.id}`}>
-          <span className={styles.letter}>{"✉️"}</span>
-        </Link>
+        <div key={letter.id} className={styles.zoom}>
+          <Link href={`/letters/${letter.id}`}>
+            <span className={styles.letter}>{"✉️"}</span>
+          </Link>
+        </div>
       ))}
       <CreateLetterButton />
     </div>

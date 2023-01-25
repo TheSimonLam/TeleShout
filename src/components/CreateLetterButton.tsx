@@ -1,19 +1,25 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import styles from "./CreateLetterButton.module.css";
 
 export default function CreateLetterButton() {
   const router = useRouter();
 
   return (
-    <button
-      onClick={(e) => {
-        e.preventDefault();
-        router.replace("/letters/new");
-      }}
-    >
-      Create
-    </button>
+    <div className={styles.createLetterButtonContainer}>
+      <div
+        className={`${styles.buttonContainer} ${styles.left}`}
+        onClick={(e) => {
+          e.preventDefault();
+          router.replace("/letters/new");
+        }}
+      >
+        <div className={`${styles.button} ${styles.round}`}>
+          <i>+</i>
+          <span></span>
+        </div>
+      </div>
+    </div>
   );
 }
