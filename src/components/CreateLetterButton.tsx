@@ -9,14 +9,13 @@ export default function CreateLetterButton() {
   return (
     <div className={styles.createLetterButtonContainer}>
       <div
-        className={`${styles.buttonContainer} ${styles.left}`}
         onClick={(e) => {
           e.preventDefault();
           router.replace("/letters/new");
         }}
       >
         <div className={`${styles.button} ${styles.round}`}>
-          <i>+</i>
+          <i className={styles.buttonText}>+</i>
           <span></span>
         </div>
       </div>

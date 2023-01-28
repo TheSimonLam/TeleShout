@@ -37,36 +37,38 @@ export default function Letter({
   };
 
   return (
-    <form onSubmit={create} className={styles.formContainer}>
-      <input
-        className={styles.titleInput}
-        type="text"
-        placeholder="title"
-        value={title}
-        onChange={(e) => {
-          setTitle(e.target.value);
-        }}
-      ></input>
-      <textarea
-        className={styles.textArea}
-        placeholder="content"
-        value={message}
-        onChange={(e) => {
-          setMessage(e.target.value);
-        }}
-      ></textarea>
-      <input
-        className={styles.fromInput}
-        type="text"
-        placeholder="from"
-        value={from}
-        onChange={(e) => {
-          setFrom(e.target.value);
-        }}
-      ></input>
-      {!isViewingSomebodyElsesLetter && (
-        <button type="submit">Send letter</button>
-      )}
+    <div className={styles.formContainer}>
+      <form onSubmit={create} className={styles.formWrapper}>
+        <input
+          className={styles.titleInput}
+          type="text"
+          placeholder="title"
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
+        ></input>
+        <textarea
+          className={styles.textArea}
+          placeholder="content"
+          value={message}
+          onChange={(e) => {
+            setMessage(e.target.value);
+          }}
+        ></textarea>
+        <input
+          className={styles.fromInput}
+          type="text"
+          placeholder="from"
+          value={from}
+          onChange={(e) => {
+            setFrom(e.target.value);
+          }}
+        ></input>
+        {!isViewingSomebodyElsesLetter && (
+          <button type="submit">Send letter</button>
+        )}
+      </form>
       <button
         type="button"
         onClick={(e) => {
@@ -76,6 +78,6 @@ export default function Letter({
       >
         Back
       </button>
-    </form>
+    </div>
   );
 }

@@ -1,13 +1,38 @@
 .formContainer {
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  padding: 60px;
+  background: #f2efe5;
+}
+
+.titleInput {
+  margin-bottom: 50px;
+}
+
+.fromInput {
+  text-align: right;
 }
 
 .fromInput,
 .titleInput {
+  font-size: 2em;
   height: 50px;
+  border: 0;
+  background: #f2efe5;
 }
 
 .textArea {
   height: 300px;
+  border: 0;
+  background: #f2efe5;
 }

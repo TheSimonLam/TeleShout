@@ -12,53 +12,15 @@
   position: absolute;
 }
 
-.buttonContainer.left {
-  left: calc(50% - 100px);
-}
-.buttonContainer.left [class^="fa"]:before,
-.buttonContainer.left [class*=" fa-"]:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -moz-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-  color: #ff1a1a;
-}
-
-.buttonContainer {
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  width: 100px;
-  /*MAKE SURE THIS IS TWICE THE SIZE OF THE HEIGHT*/
-  height: 150px;
+.buttonText {
+  font-size: 1.5em;
 }
 
 .button.round {
-  background-color: #baf0ff;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a09bfd;
   position: relative;
   width: 4em;
   height: 4em;
@@ -83,16 +45,12 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #999;
+  color: #fff;
   line-height: 1.5em;
   cursor: pointer;
-  border-color: rgba(153, 153, 153, 0.8);
+  border-color: #fff;
 }
-.button.round.loading span:not(.loading-text),
-.button.round.loading i {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
+
 .button.round.loading:after {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
@@ -156,7 +114,7 @@
   -webkit-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
   position: absolute;
-  background: #999;
+  background: #8983ff;
 }
 .button.round:after {
   content: " ";
@@ -191,7 +149,7 @@
   -o-transition-timing-function: ease-out;
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
-  border: solid 1px #999;
+  border: solid 2px #8983ff;
   position: absolute;
 }
 .button.round:hover:before {
