@@ -13,6 +13,7 @@
   width: 70vw;
   padding: 60px;
   background: #f2efe5;
+  margin-bottom: 20px;
 }
 
 .titleInput {
@@ -32,7 +33,38 @@
 }
 
 .textArea {
-  height: 300px;
+  min-height: 40vh;
   border: 0;
   background: #f2efe5;
+  line-height: 40px;
+  font-size: 1.2em;
+  resize: none;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  padding: 10px;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.backButton {
+  background-color: grey;
+}
+
+.sendButton {
+  background-color: green;
+}
+
+.errorMsg {
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }

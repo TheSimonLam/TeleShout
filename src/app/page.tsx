@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 
 const getLetters = async () => {
   const res = await fetch(
-    "http://127.0.0.1:8090/api/collections/letters/records?page=1&perPage=30",
+    "http://127.0.0.1:8090/api/collections/letters/records?page=1&perPage=3&sort=-created",
     { next: { revalidate: 5 } }
   );
   const data = await res.json();
