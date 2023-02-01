@@ -12,7 +12,7 @@ describe("Letter test suite", () => {
     const expectedMessage = "Look out!";
     const expectedFrom = "Spiderman";
 
-    const { findByDisplayValue } = render(
+    const { getByDisplayValue } = render(
       <Letter
         filledFrom={expectedFrom}
         filledMessage={expectedMessage}
@@ -20,8 +20,8 @@ describe("Letter test suite", () => {
       />
     );
 
-    const fromTitle = await findByDisplayValue(expectedTitle);
-
-    expect(fromTitle).toNotBeNull();
+    expect(getByDisplayValue(expectedTitle)).toBeInTheDocument();
+    expect(getByDisplayValue(expectedMessage)).toBeInTheDocument();
+    expect(getByDisplayValue(expectedFrom)).toBeInTheDocument();
   });
 });

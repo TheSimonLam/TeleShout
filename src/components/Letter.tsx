@@ -39,7 +39,11 @@ export default function Letter({
     } else if (from.length > MAX_FROM_LENGTH) {
       setErrorMsg("Your from field is too long!");
       return false;
-    } else if (from.length === 0 || message.length === 0 || title.length === 0) {
+    } else if (
+      from.length === 0 ||
+      message.length === 0 ||
+      title.length === 0
+    ) {
       setErrorMsg("You're missing a field!");
       return false;
     } else {
@@ -66,6 +70,7 @@ export default function Letter({
       <form onSubmit={create}>
         <div className={styles.formWrapper}>
           <input
+            data-testid={"title-input"}
             readOnly={isViewingSomebodyElsesLetter}
             className={styles.titleInput}
             type="text"
